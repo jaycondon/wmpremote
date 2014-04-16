@@ -27,22 +27,6 @@
   "ownerName" : "john.josh",
   "packagePath" : "weeklymealplanner",
   "methods" : {
-    "deviceinfoendpoint.insertDeviceInfo" : {
-      "path" : "deviceinfo",
-      "httpMethod" : "POST",
-      "authLevel" : "NONE",
-      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
-      "audiences" : [ ],
-      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
-      "rosyMethod" : "josh.john.weeklymealplanner.DeviceInfoEndpoint.insertDeviceInfo",
-      "request" : {
-        "body" : "autoTemplate(backendRequest)",
-        "bodyName" : "resource"
-      },
-      "response" : {
-        "body" : "autoTemplate(backendResponse)"
-      }
-    },
     "deviceinfoendpoint.removeDeviceInfo" : {
       "path" : "deviceinfo/{id}",
       "httpMethod" : "DELETE",
@@ -62,6 +46,22 @@
       },
       "response" : {
         "body" : "empty"
+      }
+    },
+    "deviceinfoendpoint.insertDeviceInfo" : {
+      "path" : "deviceinfo",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "josh.john.weeklymealplanner.DeviceInfoEndpoint.insertDeviceInfo",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
       }
     },
     "deviceinfoendpoint.getDeviceInfo" : {
@@ -162,6 +162,8 @@
       }
     },
     "methods" : {
+      "josh.john.weeklymealplanner.DeviceInfoEndpoint.removeDeviceInfo" : {
+      },
       "josh.john.weeklymealplanner.DeviceInfoEndpoint.insertDeviceInfo" : {
         "request" : {
           "$ref" : "DeviceInfo"
@@ -169,8 +171,6 @@
         "response" : {
           "$ref" : "DeviceInfo"
         }
-      },
-      "josh.john.weeklymealplanner.DeviceInfoEndpoint.removeDeviceInfo" : {
       },
       "josh.john.weeklymealplanner.DeviceInfoEndpoint.getDeviceInfo" : {
         "response" : {
