@@ -1,8 +1,13 @@
 package josh.john.weeklymealplanner;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
+import javax.jdo.Extent;
 import javax.jdo.PersistenceManager;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,14 +21,32 @@ public class RecipeController extends HttpServlet {
 
 	public void init(ServletConfig servletConfig) throws ServletException {
 		this.action = servletConfig.getInitParameter("action");
+
+	}
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
 		
+		switch (action) {
+		case "add":
+			
+			break;
+		case "delete":
+			response.sendRedirect("DeleteRecipe.jsp");
+			break;
+		case "update":
+			response.sendRedirect("UpdateRecipe.jsp");
+			break;
+		case "read":
+			
+			break;
+		}
+
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter()
-				.print("<html><body><h1>inside do post" + action + "</h1></body></html>");
 		switch (action) {
 		case "add":
 			addRecipe(request, response);
@@ -32,9 +55,10 @@ public class RecipeController extends HttpServlet {
 			deleteRecipe(null, response);
 			break;
 		case "update":
+			recipeArray(request, response);
 			updateRecipe(null, null);
 			break;
-		case "list":
+		case "read":
 			listRecipe(request, response);
 			break;
 		}
@@ -43,36 +67,56 @@ public class RecipeController extends HttpServlet {
 	public void addRecipe(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		PersistenceManager pm = PMF.get().getPersistenceManager();
-		response.getWriter().print(
-				"<html><body><h1>addRecipe Action" + action + "</h1></body></html>");
-        Recipe rec = new Recipe(request.getParameter("recipeName"), request.getParameter("recipeMethod"), request.getParameter("recipeIngredients"));
+		Recipe rec = new Recipe(request.getParameter("recipeName"),
+				request.getParameter("recipeMethod"),
+				request.getParameter("recipeIngredients"));
 
-        try {
-            pm.makePersistent(rec);
-        } finally {
-            pm.close();
-        }
+		try {
+			pm.makePersistent(rec);
+		} finally {
+			pm.close();
+		}
 	}
 
 	public void updateRecipe(HttpServletRequest request,
 			HttpServletResponse response) throws IOException {
-
-		response.getWriter().print(
-				"<html><body><h1>updateRecipe Action" + action + "</h1></body></html>");
+		
 	}
 
 	public void deleteRecipe(HttpServletRequest request,
 			HttpServletResponse response) throws IOException {
 
-		response.getWriter().print(
-				"<html><body><h1>deleteRecipe Action" + action + "</h1></body></html>");
 	}
 
 	public void listRecipe(HttpServletRequest request,
 			HttpServletResponse response) throws IOException {
-		response.getWriter().print(
-				"<html><body><h1>listRecipe Action" + action + "</h1></body></html>");
+		PersistenceManager pm = PMF.get().getPersistenceManager();
 
+		Extent ex = pm.getExtent(Recipe.class, true);
+		Iterator iter = ex.iterator();
+		while (iter.hasNext()) {
+			Recipe obj = (Recipe) iter.next();
+			response.getWriter().print(
+					"<html><body><h1><table><td>" + obj.getName()
+							+ "</td></table></h1></body></html>");
+		}
+
+	}
+
+	public List<Recipe> recipeArray(HttpServletRequest request,
+			HttpServletResponse response) throws IOException {
+
+		PersistenceManager pm = PMF.get().getPersistenceManager();
+		List<Recipe> recipeList = new ArrayList<Recipe>();
+		Extent e = pm.getExtent(Recipe.class, true);
+
+		Iterator iter = e.iterator();
+		while (iter.hasNext()) {
+			Recipe obj = (Recipe) iter.next();
+			recipeList.add(obj);
+		}
+
+		return recipeList;
 	}
 
 }

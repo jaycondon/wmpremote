@@ -108,4 +108,9 @@ public class Recipe {
 		this.fats = fats;
 	}
 
+	public Object getId() {
+		// TODO Auto-generated method stub
+		return id;
+	}
+
 }

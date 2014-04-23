@@ -1,6 +1,6 @@
 {
  "kind": "discovery#rpcDescription",
- "etag": "\"IneSQDZRISaU6plvxbhHIOAs-WY/YTtDQ_hZCnphLa74gNhW6vMjGE4\"",
+ "etag": "\"IneSQDZRISaU6plvxbhHIOAs-WY/B2BDFY3ksumZ9jlMaHSqi9px0FM\"",
  "discoveryVersion": "v1",
  "id": "deviceinfoendpoint:v1",
  "name": "deviceinfoendpoint",
@@ -14,8 +14,8 @@
   "x32": "http://www.google.com/images/icons/product/search-32.gif"
  },
  "protocol": "rpc",
- "rootUrl": "https://myapp.appspot.com/_ah/api/",
- "rpcUrl": "https://myapp.appspot.com/_ah/api/rpc",
+ "rootUrl": "https://josh-john.appspot.com/_ah/api/",
+ "rpcUrl": "https://josh-john.appspot.com/_ah/api/rpc",
  "rpcPath": "/_ah/api/rpc",
  "parameters": {
   "alt": {
