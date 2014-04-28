@@ -133,9 +133,6 @@
         "id" : "Recipe",
         "type" : "object",
         "properties" : {
-          "id" : {
-            "$ref" : "_any"
-          },
           "name" : {
             "type" : "string"
           },
@@ -160,12 +157,16 @@
           "fats" : {
             "type" : "number",
             "format" : "float"
+          },
+          "cost" : {
+            "type" : "number",
+            "format" : "float"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
           }
         }
-      },
-      "_any" : {
-        "id" : "_any",
-        "type" : "any"
       },
       "CollectionResponse_Recipe" : {
         "id" : "CollectionResponse_Recipe",

@@ -58,3 +58,6 @@
 # view AndroidManifest.xml #generated:33
 -keep class josh.john.weeklymealplanner.RegisterActivity { <init>(...); }
 
+# onClick res/layout/fragment_main.xml #generated:30
+-keepclassmembers class * { *** onClickGetGreeting(...); }
+

@@ -7,10 +7,10 @@
 <title>Insert title here</title>
 </head>
 <ul>
-<li><a href="CreateRecipe.jsp">Create Recipe</a></li>
-<li><a href="ReadRecipe.jsp">Read Recipe</a></li>
-<li><a href="UpdateRecipe.jsp">Update Recipe</a></li>
-<li><a href="DeleteRecipe.jsp">Delete Recipe</a></li>
+<li><a href="/CreateRecipe">Create Recipe</a></li>
+<li><a href="/ReadRecipe">Read Recipe</a></li>
+<li><a href="/UpdateRecipe">Update Recipe</a></li>
+<li><a href="/DeleteRecipe">Delete Recipe</a></li>
 <li><a href="Login.jsp">Login</a></li>
 </ul>
 <body>

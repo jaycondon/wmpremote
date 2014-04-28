@@ -1,14 +1,17 @@
 package josh.john.weeklymealplanner;
 
+import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
-import javax.persistence.Id;
+import javax.jdo.annotations.PrimaryKey;
+
 
 @PersistenceCapable
 public class Recipe {
-	
-	@Id
-	private long id;
+    
+    @PrimaryKey
+    @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+    Long k;
 	
 	@Persistent
 	private String name;
@@ -24,7 +27,17 @@ public class Recipe {
 	private float carbohydrates;
 	@Persistent
 	private float fats;
+	@Persistent
+	private float cost;
 	
+	public float getCost() {
+		return cost;
+	}
+
+	public void setCost(float cost) {
+		this.cost = cost;
+	}
+
 	Recipe()
 	{
 		
@@ -39,9 +52,10 @@ public class Recipe {
 		this.protein = 0;
 		this.carbohydrates = 0;
 		this.fats = 0;
+		this.cost = 0;
 	}
 	
-	Recipe(String name, String method, String ingredients, float calories, float protein, float carbohydrates, float fats)
+	Recipe(String name, String method, String ingredients, float calories, float protein, float carbohydrates, float fats, float cost)
 	{
 		this.name = name;
 		this.method = method;
@@ -50,6 +64,7 @@ public class Recipe {
 		this.protein = protein;
 		this.carbohydrates = carbohydrates;
 		this.fats = fats;
+		this.cost = cost;
 	}
 
 	public String getName() {
@@ -108,9 +123,8 @@ public class Recipe {
 		this.fats = fats;
 	}
 
-	public Object getId() {
-		// TODO Auto-generated method stub
-		return id;
+	public Long getId() {//this returned a key
+		return k;
 	}
 
 }
