@@ -1,36 +1,88 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="josh.john.weeklymealplanner">
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="josh.john.weeklymealplanner"
+    android:versionCode="1"
+    android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="19"/>
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-   <permission android:name="josh.john.weeklymealplanner.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
-   <uses-permission android:name="josh.john.weeklymealplanner.permission.C2D_MESSAGE"/>
-   <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
-   <uses-permission android:name="android.permission.WAKE_LOCK"/>
-   <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
-   <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
-   <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme">
-        <activity android:label="@string/app_name" android:name="josh.john.weeklymealplanner.MainActivity">
+    <permission
+        android:name="josh.john.weeklymealplanner.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="josh.john.weeklymealplanner.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="josh.john.weeklymealplanner.MainActivity"
+            android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".GCMIntentService"/>
-        <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+
+        <service android:name="josh.john.weeklymealplanner.GCMIntentService" />
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
-                <category android:name="josh.john.weeklymealplanner"/>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="josh.john.weeklymealplanner" />
             </intent-filter>
             <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
-                <category android:name="josh.john.weeklymealplanner"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="josh.john.weeklymealplanner" />
             </intent-filter>
         </receiver>
-    
-        <activity android:launchMode="singleTop" android:name=".RegisterActivity"/>
-</application>
+
+        <activity
+            android:name="josh.john.weeklymealplanner.RegisterActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="josh.john.weeklymealplanner.DataTest"
+            android:label="@string/title_activity_data_test" >
+        </activity>
+        <activity
+            android:name="josh.john.weeklymealplanner.DisplayMealTime"
+            android:label="@string/title_activity_display_meal_time" >
+        </activity>
+        <activity
+            android:name="josh.john.weeklymealplanner.DisplayRecipe"
+            android:label="@string/title_activity_display_recipe" >
+        </activity>
+        <activity
+            android:name="josh.john.weeklymealplanner.CRUDMealPlan"
+            android:label="@string/title_activity_crudmeal_plan" >
+        </activity>
+        <activity
+            android:name="josh.john.weeklymealplanner.DisplayWeekdays"
+            android:label="@string/title_activity_display_weekdays" >
+        </activity>
+        <activity
+            android:name="josh.john.weeklymealplanner.DisplayMealPlan"
+            android:label="@string/title_activity_display_meal_plan" >
+        </activity>
+        <activity
+            android:name="josh.john.weeklymealplanner.WMP"
+            android:label="@string/title_activity_wmp" >
+        </activity>
+    </application>
 
 </manifest>

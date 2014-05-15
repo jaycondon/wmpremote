@@ -1,13 +1,13 @@
 {
   "files": [
     {
-      "downloadUrl": "/downloads/messageEndpoint/v1/20140424094749/java/1.16.0-rc/john.josh-messageEndpoint-v1-20140424094749-java-1.16.0-rc-sources.jar", 
-      "path": "john.josh-messageEndpoint-v1-20140424094749-java-1.16.0-rc-sources.jar", 
+      "downloadUrl": "/downloads/messageEndpoint/v1/20140429060408/java/1.16.0-rc/john.josh-messageEndpoint-v1-20140429060408-java-1.16.0-rc-sources.jar", 
+      "path": "john.josh-messageEndpoint-v1-20140429060408-java-1.16.0-rc-sources.jar", 
       "type": "source", 
-      "timestamp": "2014-04-24 09:47"
+      "timestamp": "2014-04-29 06:04"
     }, 
     {
-      "path": "john.josh-messageEndpoint-v1-20140424094749-java-1.16.0-rc.jar.properties", 
+      "path": "john.josh-messageEndpoint-v1-20140429060408-java-1.16.0-rc.jar.properties", 
       "type": "android.properties"
     }
   ], 
@@ -702,5 +702,5 @@
   "packagePath": "weeklymealplanner", 
   "language_version": "1.16.0-rc", 
   "id": "messageEndpoint:v1", 
-  "revision": 20140424094749
+  "revision": 20140429060408
 }

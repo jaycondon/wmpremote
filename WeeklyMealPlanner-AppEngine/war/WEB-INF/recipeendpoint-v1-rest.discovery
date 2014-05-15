@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"IneSQDZRISaU6plvxbhHIOAs-WY/JLAFwQgwaBhxlsGk6nxBo8m2gKc\"",
+ "etag": "\"ADiYQGKhdYR9rpbhIFHih-UBYRs/FjvNqTsM7vzNhZl0wUyRC73TB8g\"",
  "discoveryVersion": "v1",
  "id": "recipeendpoint:v1",
  "name": "recipeendpoint",
@@ -101,12 +101,17 @@
      "type": "number",
      "format": "float"
     },
+    "cost": {
+     "type": "number",
+     "format": "float"
+    },
     "fats": {
      "type": "number",
      "format": "float"
     },
     "id": {
-     "$ref": "_any"
+     "type": "string",
+     "format": "int64"
     },
     "ingredients": {
      "type": "string"
@@ -122,10 +127,6 @@
      "format": "float"
     }
    }
-  },
-  "_any": {
-   "id": "_any",
-   "type": "any"
   }
  },
  "methods": {

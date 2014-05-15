@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="josh.john.weeklymealplanner.CRUDMealPlan"
+    tools:ignore="MergeRootFrame" >
+
+    <EditText
+        android:id="@+id/MealPlanName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Meal_Plan_Name" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="createMealPlanButton"
+        android:text="@string/Create_MealPlan_Button" />
+    
+    <Spinner
+    android:id="@+id/planets_spinner"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" />
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="updateMealPlan"
+        android:text="@string/Update_MealPlan_Button" />    
+
+</LinearLayout>

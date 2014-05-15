@@ -1,13 +1,13 @@
 {
   "files": [
     {
-      "downloadUrl": "/downloads/deviceinfoendpoint/v1/20140424094755/java/1.16.0-rc/john.josh-deviceinfoendpoint-v1-20140424094755-java-1.16.0-rc-sources.jar", 
-      "path": "john.josh-deviceinfoendpoint-v1-20140424094755-java-1.16.0-rc-sources.jar", 
+      "downloadUrl": "/downloads/deviceinfoendpoint/v1/20140429060422/java/1.16.0-rc/john.josh-deviceinfoendpoint-v1-20140429060422-java-1.16.0-rc-sources.jar", 
+      "path": "john.josh-deviceinfoendpoint-v1-20140429060422-java-1.16.0-rc-sources.jar", 
       "type": "source", 
-      "timestamp": "2014-04-24 09:47"
+      "timestamp": "2014-04-29 06:04"
     }, 
     {
-      "path": "john.josh-deviceinfoendpoint-v1-20140424094755-java-1.16.0-rc.jar.properties", 
+      "path": "john.josh-deviceinfoendpoint-v1-20140429060422-java-1.16.0-rc.jar.properties", 
       "type": "android.properties"
     }
   ], 
@@ -702,5 +702,5 @@
   "packagePath": "weeklymealplanner", 
   "language_version": "1.16.0-rc", 
   "id": "deviceinfoendpoint:v1", 
-  "revision": 20140424094755
+  "revision": 20140429060422
 }

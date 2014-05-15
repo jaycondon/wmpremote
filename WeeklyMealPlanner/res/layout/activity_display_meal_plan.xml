@@ -1,0 +1,268 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="josh.john.weeklymealplanner.DisplayMealPlan"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:id="@+id/meal_plan_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/Meal_Plan_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/Meal_Plan_Name" />
+
+        <FrameLayout
+            android:id="@+id/Sunday_Container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/Title_Sunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:hint="@string/Title_Sunday" />
+
+            <TextView
+                android:id="@+id/Sunday_Lunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/Lunch" />
+
+            <TextView
+                android:id="@+id/Sunday_Dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:hint="@string/Dinner" />
+
+            <TextView
+                android:id="@+id/Sunday_Breakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/Breakfast"
+                android:longClickable="true" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/Monday_Container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/Title_Monday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:hint="@string/Title_Monday" />
+
+            <TextView
+                android:id="@+id/Monday_Breakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:hint="@string/Breakfast" />
+
+            <TextView
+                android:id="@+id/Monday_Lunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/Lunch" />
+
+            <TextView
+                android:id="@+id/Monday_Dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:hint="@string/Dinner" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/Tuesday_Container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/Title_Tuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:hint="@string/Title_Tuesday" />
+
+            <TextView
+                android:id="@+id/Tuesday_Breakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:hint="@string/Breakfast" />
+
+            <TextView
+                android:id="@+id/Tuesday_Lunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/Lunch" />
+
+            <TextView
+                android:id="@+id/Tuesday_Dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:hint="@string/Dinner" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/Wednesday_Container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/Title_Wednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:hint="@string/Title_Wednesday" />
+
+            <TextView
+                android:id="@+id/Wednesday_Breakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:hint="@string/Breakfast" />
+
+            <TextView
+                android:id="@+id/Wednesday_Lunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/Lunch" />
+
+            <TextView
+                android:id="@+id/Wednesday_Dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:hint="@string/Dinner" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/Thursday_Container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/Title_Thursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:hint="@string/Title_Thursday" />
+
+            <TextView
+                android:id="@+id/Thursday_Breakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:hint="@string/Breakfast" />
+
+            <TextView
+                android:id="@+id/Thursday_Lunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/Lunch" />
+
+            <TextView
+                android:id="@+id/Thursday_Dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:hint="@string/Dinner" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/Friday_Container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/Title_Friday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:hint="@string/Title_Friday" />
+
+            <TextView
+                android:id="@+id/Friday_Breakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:hint="@string/Breakfast" />
+
+            <TextView
+                android:id="@+id/Friday_Lunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/Lunch" />
+
+            <TextView
+                android:id="@+id/Friday_Dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:hint="@string/Dinner" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/Saturday_Container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/Title_Saturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:hint="@string/Title_Saturday" />
+
+            <TextView
+                android:id="@+id/Saturday_Breakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:hint="@string/Breakfast" />
+
+            <TextView
+                android:id="@+id/Saturday_Lunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/Lunch" />
+
+            <TextView
+                android:id="@+id/Saturday_Dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:hint="@string/Dinner" />
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>
